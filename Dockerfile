@@ -62,4 +62,5 @@ RUN apk --no-cache add \
         glibc-*.apk \
     && apk --no-cache del \
         binutils \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && ln -s /usr/local/bin/aws /usr/bin/aws
