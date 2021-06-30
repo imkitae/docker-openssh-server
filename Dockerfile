@@ -64,3 +64,5 @@ RUN apk --no-cache add \
         binutils \
     && rm -rf /var/cache/apk/* \
     && ln -s /usr/local/bin/aws /usr/bin/aws
+
+RUN echo "AcceptEnv AWS_CONTAINER_CREDENTIALS_RELATIVE_URI" >> /etc/ssh/sshd_config
